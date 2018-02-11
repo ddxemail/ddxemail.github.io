@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="author" content="John Doe">
+    <meta name="author" content="DDX">
     
     
     
     
     
     
-    <title>Hello World | Hexo</title>
-    <link href=”http://yoursite.com“ rel=”prefetch” />
+    <title>about | Htsing</title>
+    <link href=”http://htsing.me“ rel=”prefetch” />
 
     <link rel="stylesheet" href="/css/bootstrap.min.css">
 <link rel="stylesheet" href="/css/aos.css">
@@ -61,7 +61,7 @@
     <div class="gal-menu gal-dropdown">
     <div class="circle" id="gal">
         <div class="ring">
-            <a href="http://yoursite.com" class="menuItem" style="left: 50%; top: 15%;">首页</a>
+            <a href="http://htsing.me" class="menuItem" style="left: 50%; top: 15%;">首页</a>
             
             <a class="menuItem" style="left: 80.3109%; top: 32.5%;">下一页</a>
             
@@ -84,7 +84,7 @@
                     aria-expanded="false">
                 <span class="fa fa-lg fa-reorder"></span>
             </button>
-            <a href="http://yoursite.com">
+            <a href="http://htsing.me">
                 
                 <style>
                     #gal-header .navbar-brand {
@@ -97,7 +97,7 @@
                     }
                 </style>
                 <!-- 这里使用文字(navbar_text or config.title) -->
-                <div class="navbar-brand">Hexo</div>
+                <div class="navbar-brand">Htsing</div>
                 
             </a>
         </div>
@@ -122,26 +122,54 @@
                 
                 
                 
-                <li class="">
-                    <a href="/categories">
+                <li class="dropdown">
+                    <!-- TODO 添加hover dropdown效果 -->
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false" data-hover="dropdown">
                         <i class="fa fa-list"></i>分类
                     </a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li>
+                            <a href="/categories/学习/">学习</a>
+                        </li>
+                        
+                        
+                        
+                    </ul>
                 </li>
                 
                 
                 
                 
                 
-                <li class="">
-                    <a href="/tags">
+                <li class="dropdown">
+                    <!-- TODO 添加hover dropdown效果 -->
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false" data-hover="dropdown">
                         <i class="fa fa-tags"></i>标签
                     </a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li>
+                            <a href="/tags/托福/">托福</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/tags/学习/">学习</a>
+                        </li>
+                        
+                        
+                        
+                    </ul>
                 </li>
                 
                 
                 
                 
-                <li class="">
+                <li class="current">
                     <a href="/about">
                         <i class="fa fa-user"></i>关于我
                     </a>
@@ -156,27 +184,21 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-8 gal-right" id="mainstay">
-                    
+                    <!-- 搜索页面(尽可能接近ZanBlog搜索功能) -->
+
+
 <article class="article well article-body" id="article">
-    <div class="breadcrumb">
-        <i class="fa fa-home"></i>
-        <a href="http://yoursite.com">Hexo</a>
-        >
-        <span>Hello World</span>
-    </div>
     <!-- 大型设备详细文章 -->
     <div class="hidden-xs">
         <div class="title-article">
             <h1>
-                <a href="/2018/02/11/hello-world/">Hello World</a>
+                <a href="/about/index.html">about</a>
             </h1>
         </div>
         <div class="tag-article">
-            
             <span class="label label-gal">
                 <i class="fa fa-calendar"></i> 2018-02-11
             </span>
-            
         </div>
     </div>
     <!-- 小型设备详细文章 -->
@@ -184,31 +206,19 @@
         <center>
             <div class="title-article">
                 <h4>
-                    <a href="/2018/02/11/hello-world/">Hello World</a>
+                    <a href="/about/index.html">about</a>
                 </h4>
             </div>
             <p>
                 <i class="fa fa-calendar"></i> 2018-02-11
             </p>
-            <p>
-                
-                
-            </p>
         </center>
     </div>
     <div class="content-article">
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
+        
     </div>
 </article>
+
 
 
                 </div>
@@ -229,26 +239,14 @@
     <div class="panel panel-gal" data-aos="flip-right" data-aos-duration="3000">
         <div class="panel-heading" style="text-align: center">
             <i class="fa fa-quote-left"></i>
-            John Doe
+            DDX
             <i class="fa fa-quote-right"></i>
         </div>
         <div class="author-panel text-center">
             <img src="/imgs/avatar.jpg" width="140" height="140"
                  alt="个人头像" class="author-image">
-
+            <p class="author-description">My Room,My Dream</p>
         </div>
-    </div>
-</aside>
-    
-    <aside id="sidebar-recent_comments">
-    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
-        <div class="panel-heading">
-            <i class="fa fa-comments"></i>
-            最新评论
-            <i class="fa fa-times-circle panel-remove"></i>
-            <i class="fa fa-chevron-circle-up panel-toggle"></i>
-        </div>
-        <ul class="list-group list-group-flush"></ul>
     </div>
 </aside>
     
@@ -267,13 +265,7 @@
             
             <li class="list-group-item">
                 <span class="post-title">
-                    <a href="/2018/02/11/first/">first</a>
-                </span>
-            </li>
-            
-            <li class="list-group-item">
-                <span class="post-title">
-                    <a href="/2018/02/11/hello-world/">Hello World</a>
+                    <a href="/2018/02/09/tofelnotes/">托福学习</a>
                 </span>
             </li>
             
@@ -295,13 +287,7 @@
             
             <li class="list-group-item">
                 <span class="post-title">
-                    <a href="/2018/02/11/first/">first</a>
-                </span>
-            </li>
-            
-            <li class="list-group-item">
-                <span class="post-title">
-                    <a href="/2018/02/11/hello-world/">Hello World</a>
+                    <a href="/2018/02/09/tofelnotes/">托福学习</a>
                 </span>
             </li>
             
@@ -314,46 +300,42 @@
         <div class="panel panel-gal hidden-xs" data-aos="fade-up" data-aos-duration="2000">
             <ul class="nav nav-pills pills-gal">
                 <li class="">
-                    <a href="/2018/02/11/hello-world/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
+                    <a href="/about/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
                 </li>
                 <li class="">
-                    <a href="/2018/02/11/hello-world/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
+                    <a href="/about/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
                 </li>
                 <li class="">
-                    <a href="/2018/02/11/hello-world/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
+                    <a href="/about/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
                 </li>
             </ul>
             <div class="tab-content">
                 <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
     
+    <a href="/tags/托福/" style="font-size: 15.47592807383311px;" class="tag-cloud-link">托福</a>
+    
+    <a href="/tags/学习/" style="font-size: 10.461251299887008px;" class="tag-cloud-link">学习</a>
+    
 </div>
                 <div class="friend-links tab-pane nav bs-sidenav fade" id="sidebar-friend-links">
     
     <li>
-        <a href="http://kdays.net/days/" target="_blank">KDays Forum</a>
-    </li>
-    
-    <li>
-        <a href="http://www.gal123.com/" target="_blank">绅士导航♂</a>
-    </li>
-    
-    <li>
-        <a href="http://www.moe123.com/" target="_blank">萌导航</a>
+        <a href="http://www.biueo.com" target="_blank">biueo</a>
     </li>
     
 </div>
                 <div class="links tab-pane nav bs-sidenav fade" id="sidebar-links">
     
     <li>
-        <a href="https://github.com/ZEROKISEKI/" target="_blank">Github</a>
+        <a href="https://htsing.github.com" target="_blank">Github</a>
     </li>
     
     <li>
-        <a href="https://coding.net/u/SORA1" target="_blank">Coding</a>
+        <a href="https://coding.net/u/SORA1" target="_blank">Weibo</a>
     </li>
     
     <li>
-        <a href="https://www.zhihu.com/people/aonosora/activities" target="_blank">知乎</a>
+        <a href="http://music.163.com/#/user/home?id=289148969" target="_blank">网易云音乐</a>
     </li>
     
 </div>
@@ -367,7 +349,7 @@
     </div>
     <footer id="gal-footer">
     <div class="container">
-        Copyright © 2018 John Doe Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>.&nbsp;Theme by <a href="https://github.com/ZEROKISEKI" target="_blank">AONOSORA</a>
+        Copyright © 2018 DDX Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>.&nbsp;Theme by <a href="https://github.com/ZEROKISEKI" target="_blank">AONOSORA</a>
     </div>
 </footer>
 
