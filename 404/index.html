@@ -12,6 +12,17 @@
     
     <title>404 | Htsing</title>
     <link href=”http://htsing.me“ rel=”prefetch” />
+	
+	<script>
+    (function(){
+        if('{{ page.password }}'){
+            if (prompt('请输入文章密码') !== '{{ page.password }}'){
+                alert('密码错误！');
+                history.back();
+            }
+        }
+    })();
+</script>
 
     <link rel="stylesheet" href="/css/bootstrap.min.css">
 <link rel="stylesheet" href="/css/aos.css">
@@ -281,13 +292,7 @@
             
             <li class="list-group-item">
                 <span class="post-title">
-                    <a href="/2018/02/13/前后缀/">前后缀</a>
-                </span>
-            </li>
-            
-            <li class="list-group-item">
-                <span class="post-title">
-                    <a href="/2018/02/13/日记/">日记</a>
+                    <a href="/2018/02/12/word/">重点单词</a>
                 </span>
             </li>
             
@@ -299,7 +304,13 @@
             
             <li class="list-group-item">
                 <span class="post-title">
-                    <a href="/2018/02/12/word/">重点单词</a>
+                    <a href="/2018/02/13/日记/">日记</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2018/02/13/前后缀/">前后缀</a>
                 </span>
             </li>
             
@@ -324,11 +335,11 @@
             <div class="tab-content">
                 <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
     
-    <a href="/tags/托福/" style="font-size: 11.677418778486182px;" class="tag-cloud-link">托福</a>
+    <a href="/tags/托福/" style="font-size: 10.126901762330863px;" class="tag-cloud-link">托福</a>
     
-    <a href="/tags/学习/" style="font-size: 15.236111459762423px;" class="tag-cloud-link">学习</a>
+    <a href="/tags/学习/" style="font-size: 8.050443082478377px;" class="tag-cloud-link">学习</a>
     
-    <a href="/tags/日记/" style="font-size: 18.880436902345195px;" class="tag-cloud-link">日记</a>
+    <a href="/tags/日记/" style="font-size: 18.667096508750888px;" class="tag-cloud-link">日记</a>
     
 </div>
                 <div class="friend-links tab-pane nav bs-sidenav fade" id="sidebar-friend-links">
