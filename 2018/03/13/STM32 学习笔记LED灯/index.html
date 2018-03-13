@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="Htsing-且随疾风前行，身后亦须留心">
 <meta property="og:description" content="stm32 入门篇 跑马灯实验">
 <meta property="og:image" content="http://p3v7kl29h.bkt.clouddn.com/18-3-13/53923380.jpg">
-<meta property="og:updated_time" content="2018-03-13T10:08:14.392Z">
+<meta property="og:updated_time" content="2018-03-13T10:13:33.076Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="LED跑马灯控制">
 <meta name="twitter:description" content="stm32 入门篇 跑马灯实验">
@@ -208,22 +208,8 @@
 <li>初始化IO口模式。调用函数GPIO_Init();</li>
 <li>操作IO口，输出高低电平。<br>GPIO_SetBits()<br>GPIO_ResetBits()</li>
 </ul>
-<h2 id="主函数"><a href="#主函数" class="headerlink" title="主函数"></a>主函数</h2><ul>
-<li><p>#include “sys.h”<br>#include “stm32f10x.h”<br>#include “delay.h”<br>#include “led.h”<br>#include “usart.h”<br>int main()<br>{<br>   LED_Init();<br>   delay_init();<br>while(1)</p>
-<pre><code>  {
-   GPIO_SetBits(GPIOE,GPIO_Pin_5);
-  GPIO_SetBits(GPIOB,GPIO_Pin_5);
-      delay_ms(200);
-
-      GPIO_ResetBits(GPIOE,GPIO_Pin_5);
-GPIO_ResetBits(GPIOB,GPIO_Pin_5);
-      delay_ms(100);
-  }
-</code></pre><h2 id="led硬件部分函数"><a href="#led硬件部分函数" class="headerlink" title="led硬件部分函数"></a>led硬件部分函数</h2></li>
-<li><p>#include “led.h”<br>#include “stm32f10x.h”<br>void LED_Init(void)<br>{</p>
-<p> GPIO_InitTypeDef GPIO_InitStruct;<br> RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOB,ENABLE);<br> RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOE,ENABLE);<br> GPIO_InitStruct.GPIO_Mode=0x10;<br> GPIO_InitStruct.GPIO_Pin=GPIO_Pin_5;<br> GPIO_InitStruct.GPIO_Speed=GPIO_Speed_50MHz;<br> GPIO_Init(GPIOB,&amp;GPIO_InitStruct);<br> GPIO_SetBits(GPIOB,GPIO_Pin_5);<br> GPIO_InitStruct.GPIO_Mode=0x10;<br> GPIO_InitStruct.GPIO_Pin=GPIO_Pin_5;<br> GPIO_InitStruct.GPIO_Speed=GPIO_Speed_50MHz;<br> GPIO_Init(GPIOE,&amp;GPIO_InitStruct);<br> GPIO_SetBits(GPIOE,GPIO_Pin_5);<br>}</p>
-</li>
-</ul>
+<h2 id="主函数"><a href="#主函数" class="headerlink" title="主函数"></a>主函数</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#include "sys.h"</span></span><br><span class="line">  <span class="comment">#include "stm32f10x.h"</span></span><br><span class="line">  <span class="comment">#include "delay.h"</span></span><br><span class="line">  <span class="comment">#include "led.h"</span></span><br><span class="line">  <span class="comment">#include "usart.h"</span></span><br><span class="line">  int main()</span><br><span class="line">  &#123;</span><br><span class="line">     LED_Init();</span><br><span class="line">     delay_init();</span><br><span class="line">  <span class="keyword">while</span>(<span class="number">1</span>)</span><br><span class="line">  &#123;</span><br><span class="line">    GPIO_SetBits(GPIOE,GPIO_Pin_5);</span><br><span class="line">    GPIO_SetBits(GPIOB,GPIO_Pin_5);</span><br><span class="line">    delay_ms(<span class="number">200</span>);</span><br><span class="line">    GPIO_ResetBits(GPIOE,GPIO_Pin_5);</span><br><span class="line">    GPIO_ResetBits(GPIOB,GPIO_Pin_5);</span><br><span class="line">    delay_ms(<span class="number">100</span>);</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+<h2 id="led硬件部分函数"><a href="#led硬件部分函数" class="headerlink" title="led硬件部分函数"></a>led硬件部分函数</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#include "led.h"</span></span><br><span class="line">   <span class="comment">#include "stm32f10x.h"</span></span><br><span class="line">  void LED_Init(void)</span><br><span class="line"> &#123;</span><br><span class="line">    </span><br><span class="line">    GPIO_InitTypeDef GPIO_InitStruct;</span><br><span class="line">    RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOB,ENABLE);</span><br><span class="line">    RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOE,ENABLE);</span><br><span class="line">    GPIO_InitStruct.GPIO_Mode=<span class="number">0x10</span>;</span><br><span class="line">    GPIO_InitStruct.GPIO_Pin=GPIO_Pin_5;</span><br><span class="line">    GPIO_InitStruct.GPIO_Speed=GPIO_Speed_50MHz;</span><br><span class="line">    GPIO_Init(GPIOB,&amp;GPIO_InitStruct);</span><br><span class="line">    GPIO_SetBits(GPIOB,GPIO_Pin_5);  </span><br><span class="line">    GPIO_InitStruct.GPIO_Mode=<span class="number">0x10</span>;</span><br><span class="line">    GPIO_InitStruct.GPIO_Pin=GPIO_Pin_5;</span><br><span class="line">    GPIO_InitStruct.GPIO_Speed=GPIO_Speed_50MHz;</span><br><span class="line">    GPIO_Init(GPIOE,&amp;GPIO_InitStruct);</span><br><span class="line">    GPIO_SetBits(GPIOE,GPIO_Pin_5);</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
 <h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><ul>
 <li>main函数错误打成了mian！以后要细心啊。</li>
 </ul>
