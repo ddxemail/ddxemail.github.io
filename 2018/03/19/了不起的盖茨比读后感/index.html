@@ -6,21 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://htsing.me">
-  <title>Urllib库的应用 | Htsing-且随疾风前行，身后亦须留心</title>
+  <title>《了不起的盖茨比》读后感 | Htsing-且随疾风前行，身后亦须留心</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="爬虫Urllib库的应用">
-<meta name="keywords" content="python，爬虫">
+  <meta name="description" content="练下写作">
+<meta name="keywords" content="读书笔记">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Urllib库的应用">
-<meta property="og:url" content="http://htsing.me/2018/02/26/spider/index.html">
+<meta property="og:title" content="《了不起的盖茨比》读后感">
+<meta property="og:url" content="http://htsing.me/2018/03/19/了不起的盖茨比读后感/index.html">
 <meta property="og:site_name" content="Htsing-且随疾风前行，身后亦须留心">
-<meta property="og:description" content="爬虫Urllib库的应用">
-<meta property="og:image" content="http://p3v7kl29h.bkt.clouddn.com/18-3-2/521603.jpg">
-<meta property="og:updated_time" content="2018-03-02T12:40:30.691Z">
+<meta property="og:description" content="练下写作">
+<meta property="og:image" content="http://p3v7kl29h.bkt.clouddn.com/18-3-19/96977128.jpg">
+<meta property="og:updated_time" content="2018-03-19T16:03:16.749Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Urllib库的应用">
-<meta name="twitter:description" content="爬虫Urllib库的应用">
-<meta name="twitter:image" content="http://p3v7kl29h.bkt.clouddn.com/18-3-2/521603.jpg">
+<meta name="twitter:title" content="《了不起的盖茨比》读后感">
+<meta name="twitter:description" content="练下写作">
+<meta name="twitter:image" content="http://p3v7kl29h.bkt.clouddn.com/18-3-19/96977128.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Htsing-且随疾风前行，身后亦须留心" type="application/atom+xml">
   
@@ -164,14 +164,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="python-spider" class="article article-type-python " itemscope itemprop="blogPost">
+            <article id="post-了不起的盖茨比读后感" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Urllib库的应用
+      《了不起的盖茨比》读后感
     </h1>
   
 
@@ -180,8 +180,8 @@
 
 
         
-        <a href="/2018/02/26/spider/" class="archive-article-date">
-  	<time datetime="2018-02-26T05:03:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-02-26</time>
+        <a href="/2018/03/19/了不起的盖茨比读后感/" class="archive-article-date">
+  	<time datetime="2018-03-19T13:04:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-19</time>
 </a>
         
       </header>
@@ -193,32 +193,21 @@
     
 	    <div class="article-entry" itemprop="articleBody">
       
-        <p><img src="http://p3v7kl29h.bkt.clouddn.com/18-3-2/521603.jpg" alt=""></p>
-<p>爬虫Urllib库的应用</p>
+        <p><img src="http://p3v7kl29h.bkt.clouddn.com/18-3-19/96977128.jpg" alt=""><br> 练下写作</p>
 <a id="more"></a>
-<h1 id="初识urllib模块"><a href="#初识urllib模块" class="headerlink" title="初识urllib模块"></a><center>初识urllib模块</center></h1><h2 id="用urllib快速爬去网页"><a href="#用urllib快速爬去网页" class="headerlink" title="用urllib快速爬去网页"></a>用urllib快速爬去网页</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> urllib.request</span><br><span class="line">file=urllib.request.urlopen(<span class="string">"http://www.baidu.com"</span>)<span class="comment">#以百度为例</span></span><br><span class="line">data=file.read()<span class="comment">#整个读取</span></span><br><span class="line">dataline=file.readline()<span class="comment">#一行一行的读取</span></span><br><span class="line">print(dataline)<span class="comment">#打印</span></span><br></pre></td></tr></table></figure>
-<pre><code>b&apos;&apos;
-</code></pre><p>file.read()读取文件的全部内容read会把读取的内容赋予给一个字符串变量</p>
-<p>file.readlines()读取文件的全部内容 readlines会把读取的变量赋予给一个列表变量</p>
-<p>file.readline()读取文件的一行内容</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">fhandle=open(<span class="string">"C:/Users/Htsing/Desktop/EQ/2.html"</span>,<span class="string">"wb"</span>)</span><br><span class="line">fhandle.write(data)</span><br><span class="line">fhandle.close()</span><br><span class="line">file.info()</span><br><span class="line">file.getcode()</span><br><span class="line">file.geturl()</span><br></pre></td></tr></table></figure>
-<pre><code>&apos;http://www.baidu.com&apos;
-</code></pre><p>file.info()：返回与当前环境有关的信息</p>
-<p>file.getcode():返回当前网页得状态码</p>
-<p>file.geturl():得到当前网页的URL</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">f=urllib.request.quote(<span class="string">"http://www.sina.com.cn"</span>)</span><br><span class="line">urllib.request.unquote(f)</span><br></pre></td></tr></table></figure>
-<pre><code>&apos;http://www.sina.com.cn&apos;
-</code></pre><p>当URL中含有汉字时要进行重新编码</p>
-<p>内置函数 quote和unquote：编码解码</p>
-<h2 id="模拟浏览器——headers属性"><a href="#模拟浏览器——headers属性" class="headerlink" title="模拟浏览器——headers属性"></a>模拟浏览器——headers属性</h2><ol>
-<li>使用bulid_opener()修改报头</li>
-</ol>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> urllib.request</span><br><span class="line">url=<span class="string">"http://www.baidu.com"</span></span><br><span class="line">headers=(<span class="string">"User-Agent"</span>,<span class="string">"Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36"</span>)</span><br><span class="line">opener=urllib.request.build_opener()</span><br><span class="line">opener.addheaders= [headers]</span><br><span class="line">data=opener.open(url).read()</span><br><span class="line">fhandle=open(<span class="string">"C:/Users/Htsing/Desktop/EQ/3.html"</span>,<span class="string">"wb"</span>)</span><br><span class="line">fhandle.write(data)</span><br><span class="line">fhandle.close()</span><br></pre></td></tr></table></figure>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="700" height="52" src="//music.163.com/outchain/player?type=2&id=2184644&auto=1&height=32"></iframe>
+
+<h2 id="读后感"><a href="#读后感" class="headerlink" title="读后感"></a><center>读后感</center></h2><p>  昨天读完了《了不起的盖茨比》这本书，由于有点忙。所以读书笔记就今天写了，写的不好就不要见怪了。我想慢慢的培养我的写作能力。</p>
+<p>其实我是先看了电影后再读这本书的。才哥推荐给我的这部电影，才哥推荐的时候说：“这是西方的《红楼梦》。”  看过电影后，当时就简简单单的看成了爱情悲剧。看过影评后才发现这里面有好多深层次的东西我没有看出来。和以前我看《让子弹飞》一样的情况。<br>看过《了不起的盖茨比》电影后，我就打算开学到图书馆借一下这本书。当然开学并不是我想的那么悠闲，一看学就忙的要死，渐渐的就把这件事给忘了。<br>后来早上听了《young and beautiful》（电影《了不起的盖茨比》的插曲）这首歌，真是太好听了，所以我就立刻打算了却我未完的心事。可笑的是图书馆的书都被借完了，无奈下就下了电子书，伴随着《young and beautiful》这首歌看完了。</p>
+<p>接下来 就讲一下我的一些浅陋的见解吧。</p>
+<p>  首先这不整体的故事，我感觉很完美讲述了人走茶凉，当然那些参加过聚会的朋友们不参加盖茨比的葬礼，相信盖茨比也不会十分在意，毕竟他之前所做的一切都是为了邀请到黛西。然而让人心寒的是 盖茨比死后 黛西竟然连一束花都没有送，真的感觉黛西这个人就是一个矛盾体的存在。他的矛盾首先是对爱情、其次对人生。首先是汤姆和盖茨比之间的选择，对人性的选择。黛西给我的总体感觉就是太懦弱。</p>
+<p>了不起的盖茨比：</p>
 <ol>
-<li>使用add_header（）添加报头</li>
+<li>善于经商，从一个贫穷家的小伙子到了具有公馆的富豪，虽然说他救了富豪，并继承了他的遗产，可是如果他没有头脑怎么会富甲一方！</li>
+<li>敢爱敢恨，他邂逅黛西也是最浪漫的一个情节。怎么说呢，在当时那么一个很重视等级身份的美国。一个普通军官喜欢上一个富家小姐，无不让人震愕。这也让我想到了《泰坦尼克号》的男女主角。或许这就是爱情的力量。</li>
+<li>执着：对爱情的执着，对黛西的爱。有人说：盖茨比对黛西已经由爱变成了一种执念，只是为了得到上流社会的认可。刚开始我也是这么觉得，但现在我改变了我的看法。盖茨比对黛西的爱是真心地。如果是仅仅为了得到上流社会的认可！为什么当黛西提出要隐居山林的那种话，盖茨比没有拒绝！！！再说盖茨比早在人们心中以传说的形式存在，虽然都是错误的认识，但人们最起码承认了盖茨比的大富豪的地位这是毋庸置疑的。</li>
 </ol>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> urllib.request</span><br><span class="line">url=<span class="string">"http://www.baidu.com"</span></span><br><span class="line">req=urllib.request.Request(url)</span><br><span class="line">req.add_header(<span class="string">"User-Agent"</span>,<span class="string">"Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36"</span>)</span><br><span class="line">data=urllib.request.urlopen(req).read()</span><br></pre></td></tr></table></figure>
-<h2 id="超时设置"><a href="#超时设置" class="headerlink" title="超时设置"></a>超时设置</h2><p>格式：urllib.request.urlopen(要打开的网页，timeout=时间值)</p>
+<p>胸有千万言，出口却无章。以后要多练习下 。总体很乱、迁就着看吧                                </p>
 
       
 
@@ -263,24 +252,13 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">读书笔记</a>
         		</li>
       		
 		</ul>
 	</div>
 
       
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/python//" class="article-tag-list-link color2">python</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
 
       
 
@@ -330,7 +308,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://htsing.me/2018/02/26/spider/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://htsing.me/2018/03/19/了不起的盖茨比读后感/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -344,18 +322,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/02/26/spider-1/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          才哥百度壁纸爬虫
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/02/26/combiation/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">字母组合</div>
+    <a href="/2018/03/13/STM32 学习笔记LED灯/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">LED跑马灯控制</div>
       <i class="icon-circle-right"></i>
     </a>
   
