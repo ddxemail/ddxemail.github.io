@@ -6,21 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://htsing.me">
-  <title>LED跑马灯控制 | Htsing-且随疾风前行，身后亦须留心</title>
+  <title>关山月 | Htsing-且随疾风前行，身后亦须留心</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="stm32 入门篇 跑马灯实验">
-<meta name="keywords" content="STM32">
+  <meta name="description" content="练习盲打 嘿嘿">
+<meta name="keywords" content="近代诗与古诗">
 <meta property="og:type" content="article">
-<meta property="og:title" content="LED跑马灯控制">
-<meta property="og:url" content="http://htsing.me/2018/03/13/STM32 学习笔记LED灯/index.html">
+<meta property="og:title" content="关山月">
+<meta property="og:url" content="http://htsing.me/2018/03/24/关山月/index.html">
 <meta property="og:site_name" content="Htsing-且随疾风前行，身后亦须留心">
-<meta property="og:description" content="stm32 入门篇 跑马灯实验">
-<meta property="og:image" content="http://p3v7kl29h.bkt.clouddn.com/18-3-13/53923380.jpg">
-<meta property="og:updated_time" content="2018-03-13T10:13:33.076Z">
+<meta property="og:description" content="练习盲打 嘿嘿">
+<meta property="og:image" content="http://p3v7kl29h.bkt.clouddn.com/18-3-24/20142351.jpg">
+<meta property="og:updated_time" content="2018-03-24T11:07:58.109Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="LED跑马灯控制">
-<meta name="twitter:description" content="stm32 入门篇 跑马灯实验">
-<meta name="twitter:image" content="http://p3v7kl29h.bkt.clouddn.com/18-3-13/53923380.jpg">
+<meta name="twitter:title" content="关山月">
+<meta name="twitter:description" content="练习盲打 嘿嘿">
+<meta name="twitter:image" content="http://p3v7kl29h.bkt.clouddn.com/18-3-24/20142351.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Htsing-且随疾风前行，身后亦须留心" type="application/atom+xml">
   
@@ -164,14 +164,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-STM32 学习笔记LED灯" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-关山月" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      LED跑马灯控制
+      关山月
     </h1>
   
 
@@ -180,8 +180,8 @@
 
 
         
-        <a href="/2018/03/13/STM32 学习笔记LED灯/" class="archive-article-date">
-  	<time datetime="2018-03-13T07:46:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-13</time>
+        <a href="/2018/03/24/关山月/" class="archive-article-date">
+  	<time datetime="2018-03-24T10:29:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-24</time>
 </a>
         
       </header>
@@ -193,26 +193,11 @@
     
 	    <div class="article-entry" itemprop="articleBody">
       
-        <p><img src="http://p3v7kl29h.bkt.clouddn.com/18-3-13/53923380.jpg" alt=""><br>stm32 入门篇 跑马灯实验</p>
-<a id="more"></a>
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="700" height="52" src="//music.163.com/outchain/player?type=2&id=1491585&auto=1&height=32"></iframe>
-
-<h1 id="重要函数"><a href="#重要函数" class="headerlink" title="重要函数"></a>重要函数</h1><ol>
-<li>1个初始化函数：<br>void GPIO_Init(GPIO_TypeDef**GPIOx,GPIO_initStruct)</li>
-<li>两个读取输入电平函数：<br>unit8_t GPIO_ReadInputDataBit(GPIO_TypeDef*GPIOx,unit16_t GPIO_Pin)<br>unit16_t GPIO_ReadInputData()</li>
-<li>两个读取输出电平函数<br>unit8_t GPIO_ReadOutputDataBit()<br>unit16_t GPIO_ReadOutputData()</li>
-<li>四个设置输出电平函数：<br>void GPIO_SetBits()<br>void GPIO_ResetBits()<br>void GPIO_WriteBit()<br>void GPIO_Write()</li>
-</ol>
-<h1 id="编写跑马灯程序"><a href="#编写跑马灯程序" class="headerlink" title="编写跑马灯程序"></a>编写跑马灯程序</h1><h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><ul>
-<li>使能IO口时钟。调用函数RCC_APB2PeriphClockCmd()</li>
-<li>初始化IO口模式。调用函数GPIO_Init();</li>
-<li>操作IO口，输出高低电平。<br>GPIO_SetBits()<br>GPIO_ResetBits()</li>
-</ul>
-<h2 id="主函数"><a href="#主函数" class="headerlink" title="主函数"></a>主函数</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#include "sys.h"</span></span><br><span class="line">  <span class="comment">#include "stm32f10x.h"</span></span><br><span class="line">  <span class="comment">#include "delay.h"</span></span><br><span class="line">  <span class="comment">#include "led.h"</span></span><br><span class="line">  <span class="comment">#include "usart.h"</span></span><br><span class="line">  int main()</span><br><span class="line">  &#123;</span><br><span class="line">     LED_Init();</span><br><span class="line">     delay_init();</span><br><span class="line">  <span class="keyword">while</span>(<span class="number">1</span>)</span><br><span class="line">  &#123;</span><br><span class="line">    GPIO_SetBits(GPIOE,GPIO_Pin_5);</span><br><span class="line">    GPIO_SetBits(GPIOB,GPIO_Pin_5);</span><br><span class="line">    delay_ms(<span class="number">200</span>);</span><br><span class="line">    GPIO_ResetBits(GPIOE,GPIO_Pin_5);</span><br><span class="line">    GPIO_ResetBits(GPIOB,GPIO_Pin_5);</span><br><span class="line">    delay_ms(<span class="number">100</span>);</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
-<h2 id="led硬件部分函数"><a href="#led硬件部分函数" class="headerlink" title="led硬件部分函数"></a>led硬件部分函数</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#include "led.h"</span></span><br><span class="line">   <span class="comment">#include "stm32f10x.h"</span></span><br><span class="line">  void LED_Init(void)</span><br><span class="line"> &#123;</span><br><span class="line">    </span><br><span class="line">    GPIO_InitTypeDef GPIO_InitStruct;</span><br><span class="line">    RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOB,ENABLE);</span><br><span class="line">    RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOE,ENABLE);</span><br><span class="line">    GPIO_InitStruct.GPIO_Mode=<span class="number">0x10</span>;</span><br><span class="line">    GPIO_InitStruct.GPIO_Pin=GPIO_Pin_5;</span><br><span class="line">    GPIO_InitStruct.GPIO_Speed=GPIO_Speed_50MHz;</span><br><span class="line">    GPIO_Init(GPIOB,&amp;GPIO_InitStruct);</span><br><span class="line">    GPIO_SetBits(GPIOB,GPIO_Pin_5);  </span><br><span class="line">    GPIO_InitStruct.GPIO_Mode=<span class="number">0x10</span>;</span><br><span class="line">    GPIO_InitStruct.GPIO_Pin=GPIO_Pin_5;</span><br><span class="line">    GPIO_InitStruct.GPIO_Speed=GPIO_Speed_50MHz;</span><br><span class="line">    GPIO_Init(GPIOE,&amp;GPIO_InitStruct);</span><br><span class="line">    GPIO_SetBits(GPIOE,GPIO_Pin_5);</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
-<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><ul>
-<li>main函数错误打成了mian！以后要细心啊。</li>
-</ul>
+        <p><img src="http://p3v7kl29h.bkt.clouddn.com/18-3-24/20142351.jpg" alt=""><br>练习盲打 嘿嘿<br><a id="more"></a></p>
+<p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="700" height="52" src="//music.163.com/outchain/player?type=2&id=35566987&auto=1&height=32"></iframe></p>
+<h1 id="《关山月》"><a href="#《关山月》" class="headerlink" title="《关山月》"></a><center>《关山月》</center></h1><h2 id="李白"><a href="#李白" class="headerlink" title="李白"></a><center>李白</center></h2><p>  明月出天山，苍茫云海间。<br>  长风几万里，吹度玉门关。<br>  汉下白登道，胡窥青海湾。<br>  由来征战地，不见有人还。<br>  戍客望边色，思归多苦颜。<br>  高楼当此夜，叹息未应闲。</p>
+<p>译文：皎洁的月亮从祁连山升起，轻轻飘浮在迷茫的云海里。长风掀起尘沙席卷几万里，玉门关早就被风沙层层封闭。白登道那里汉军旌旗林立，青海湾却是胡人窥视之地。自古来这征战厮杀的场所，参战者从来不见有生还的。守卫边陲的征夫面对现实，那个不愁眉苦脸思归故里？今夜高楼上思夫的妻子们，又该是当窗不眠叹息不已。</p>
+<p>评析：这首诗在内容上继承古乐府，但诗人笔力浑宏，又有很大的提高。诗的开头四句，主要写关、山、月三种因素在内的辽阔的边塞图景，从而表现征人怀乡的情绪；中间四句具体写到战争的景象，战场悲惨残酷；后四句写征人望边地思念家乡，进而推想妻子月夜高楼叹息不止。这末了四句与诗人《春思》“当君怀归日，是妾断肠时”同一笔调。</p>
 
       
 
@@ -257,7 +242,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">STM32</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">近代诗与古诗</a>
         		</li>
       		
 		</ul>
@@ -313,7 +298,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://htsing.me/2018/03/13/STM32 学习笔记LED灯/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://htsing.me/2018/03/24/关山月/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -327,18 +312,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/03/19/了不起的盖茨比读后感/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          《了不起的盖茨比》读后感
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/03/13/note3-1/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">日记3-1</div>
+    <a href="/2018/03/19/了不起的盖茨比读后感/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">《了不起的盖茨比》读后感</div>
       <i class="icon-circle-right"></i>
     </a>
   
