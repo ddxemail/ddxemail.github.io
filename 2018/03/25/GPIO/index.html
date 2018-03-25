@@ -14,7 +14,7 @@
 <meta property="og:url" content="http://htsing.me/2018/03/25/GPIO/index.html">
 <meta property="og:site_name" content="Htsing-且随疾风前行，身后亦须留心">
 <meta property="og:image" content="http://p3v7kl29h.bkt.clouddn.com/18-3-25/67854110.jpg">
-<meta property="og:updated_time" content="2018-03-25T06:20:10.713Z">
+<meta property="og:updated_time" content="2018-03-25T06:24:17.293Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="GPIO学习">
 <meta name="twitter:image" content="http://p3v7kl29h.bkt.clouddn.com/18-3-25/67854110.jpg">
@@ -196,25 +196,25 @@
 
 <h2 id="Stm32的IO口的模式"><a href="#Stm32的IO口的模式" class="headerlink" title="Stm32的IO口的模式"></a>Stm32的IO口的模式</h2><p>1、输入浮空<br>2、输入上拉<br>3、输入下拉<br>4、模拟输入<br>5、开漏输出<br>6、推挽输出<br>7、推挽式复用功能<br>8、开漏复用功能</p>
 <h2 id="Stm32的IO口寄存器"><a href="#Stm32的IO口寄存器" class="headerlink" title="Stm32的IO口寄存器"></a>Stm32的IO口寄存器</h2><p>STM32 的每个 IO 端口都有 7 个寄存器来控制。他们分别是：配置模式的 2 个 32 位的端口配置寄存器 CRL 和 CRH；2 个 32 位的数据寄存器 IDR 和 ODR；1 个 32 位的置位/复位寄存器BSRR；一个 16 位的复位寄存器 BRR；1 个 32 位的锁存寄存器 LCKR</p>
-<ol>
+<ul>
 <li>CRL寄存器：（CRH寄存器一样！控制高八位）</li>
-</ol>
+</ul>
 <p>在固件库开发中，操作寄存器 CRH 和 CRL 来配置 IO 口的模式和速度是通过 GPIO 初始化函数完成：void GPIO_Init(GPIO_TypeDef<em> GPIOx, GPIO_InitTypeDef</em> GPIO_InitStruct)；</p>
 <p>0X0 表示模拟输入模式（ADC 用）<br>0X3 表示推挽输出模式（做输出口用，50M 速率）<br>0X8 表示上/下拉输入模式（做输入口用）<br>0XB 表示复用输出（使用 IO 口的第二功能，50M 速率）</p>
-<ol>
+<ul>
 <li>IDR 是一个端口输入数据寄存器，只用了低 16 位。该寄存器为只读寄存器，并且只能以16 位的形式读出。</li>
-</ol>
+</ul>
 <p>在固件库中操作 IDR 寄存器读取 IO 端口数据是通过 GPIO_ReadInputDataBit 函数实现的：uint8_t GPIO_ReadInputDataBit(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin)比如我要读 GPIOA.5 的电平状态，那么方法是：GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_5);</p>
-<ol>
+<ul>
 <li>ODR 是一个端口输出数据寄存器，也只用了低 16 位。该寄存器为可读写，从该寄存器读出来的数据可以用于判断当前 IO 口的输出状态。而向该寄存器写数据，则可以控制某个 IO 口的输出电平。</li>
-</ol>
+</ul>
 <p>固件库中设置 ODR 寄存器的值来控制 IO 口的输出状态是通过函数 GPIO_Write 来实现的：void GPIO_Write(GPIO_TypeDef* GPIOx, uint16_t PortVal);</p>
-<ol>
+<ul>
 <li>BSRR 寄存器是端口位设置/清除寄存器。该寄存器和 ODR 寄存器具有类似的作用，都可<br>以用来设置 GPIO 端口的输出位是 1 还是 0。</li>
-</ol>
-<ol>
+</ul>
+<ul>
 <li>BRR 寄存器是端口位清除寄存器。该寄存器的作用跟 BSRR 的高 16 位雷同，这里就不做详细讲解。在 STM32 固件库中，通过 BSRR 和 BRR 寄存器设置 GPIO 端口输出是通过函数GPIO_SetBits()和函数 GPIO_ResetBits()来完成的。<br>void GPIO_SetBits(GPIO_TypeDef<em> GPIOx, uint16_t GPIO_Pin);<br>void GPIO_ResetBits(GPIO_TypeDef</em> GPIOx, uint16_t GPIO_Pin)<br>在多数情况下，我们都是采用这两个函数来设置 GPIO 端口的输入和输出状态。比如我们要设置 GPIOB.5 输出 1，那么方法为：<br>GPIO_SetBits(GPIOB, GPIO_Pin_5);<br>反之如果要设置 GPIOB.5 输出位 0，方法为：<br>GPIO_ResetBits (GPIOB, GPIO_Pin_5);</li>
-</ol>
+</ul>
 <h2 id="总结思路："><a href="#总结思路：" class="headerlink" title="总结思路："></a>总结思路：</h2><p>1） 使能 IO 口时钟。调用函数为 RCC_APB2PeriphClockCmd();<br>2） 初始化 IO 参数。调用函数 GPIO_Init();<br>3） 操作 IO。操作 IO 的方法就是上面我们讲解的方法。</p>
 
       
