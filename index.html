@@ -162,6 +162,112 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-PYTHON-NO1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/08/18/PYTHON-NO1/">PYTHON_NO1</a>
+    </h1>
+  
+
+
+
+
+
+        
+        <a href="/2018/08/18/PYTHON-NO1/" class="archive-article-date">
+  	<time datetime="2018-08-18T07:39:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-18</time>
+</a>
+        
+      </header>
+    
+	
+	    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="python-学习笔记No-1"><a href="#python-学习笔记No-1" class="headerlink" title="python 学习笔记No.1"></a>python 学习笔记No.1</h1><h3 id="python中的运算符优先级"><a href="#python中的运算符优先级" class="headerlink" title=" python中的运算符优先级"></a> python中的运算符优先级</h3><p> 比较运算符低于逻辑运算符</p>
+<p> 逻辑运算符：not 最高 and 次之 or 优先级最低</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">not</span> <span class="number">1</span>+<span class="number">4</span>&gt;<span class="number">3</span> <span class="keyword">or</span> <span class="number">4</span>&gt;<span class="number">3</span> <span class="keyword">and</span> <span class="number">4</span>&gt;<span class="number">3</span></span><br><span class="line">(<span class="keyword">not</span> <span class="number">1</span>+<span class="number">4</span>&gt;<span class="number">3</span>)<span class="keyword">or</span>(<span class="number">4</span>&gt;<span class="number">3</span> <span class="keyword">and</span> <span class="number">4</span>&gt;<span class="number">3</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>True
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">s=<span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span> m <span class="keyword">in</span> range(<span class="number">10</span>):</span><br><span class="line"> s=s+m</span><br><span class="line"></span><br><span class="line"><span class="keyword">print</span> (s)</span><br></pre></td></tr></table></figure>
+<pre><code>45
+</code></pre><h3 id="EXample"><a href="#EXample" class="headerlink" title="EXample"></a>EXample</h3><p>请编写一个程序 要求用户输入一个大写英文字母，程序根据输入字符在字母表里的顺序位置n 输出一个高度为n的金字塔图形。使下一列的中间字母使用户输入的字母例如 用户输入E时，程序将产生如下输出。</p>
+<pre><code>    A
+
+   ABA
+
+  ABCBA
+
+ ABCDCBA
+
+ABCDEDCBA
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">printGoldTa</span><span class="params">(input)</span>:</span></span><br><span class="line">    L = [chr(i) <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">65</span>,<span class="number">91</span>)] <span class="comment">##大写字母A--Z </span></span><br><span class="line">    idA = <span class="number">65</span> <span class="comment">#从A开始</span></span><br><span class="line">    idInput = ord(input)</span><br><span class="line">    num =  idInput - idA + <span class="number">1</span> <span class="comment">##A--输入的字符个数</span></span><br><span class="line">    <span class="keyword">print</span> (<span class="string">'A--&gt;'</span> + input + <span class="string">':'</span> + str(num))</span><br><span class="line">    tempResult =<span class="string">""</span></span><br><span class="line">    <span class="keyword">for</span> C <span class="keyword">in</span> range(<span class="number">0</span>,num):</span><br><span class="line">        <span class="comment">##左 [ABCD]</span></span><br><span class="line">        <span class="keyword">for</span> C1 <span class="keyword">in</span> range(<span class="number">0</span>,C):</span><br><span class="line">            tempResult = tempResult + L[C1] </span><br><span class="line">        <span class="comment">## 中 [E]</span></span><br><span class="line">        tempResult = tempResult + L[C] </span><br><span class="line">        <span class="comment">##右 [DCBA]</span></span><br><span class="line">        <span class="keyword">for</span> C2 <span class="keyword">in</span> range(C<span class="number">-1</span>,<span class="number">-1</span>,<span class="number">-1</span>):</span><br><span class="line">            tempResult = tempResult + L[C2]  </span><br><span class="line">        <span class="comment">##每行空格</span></span><br><span class="line">        <span class="keyword">for</span> C3 <span class="keyword">in</span> range(num<span class="number">-1</span>-C): </span><br><span class="line">            tempResult = <span class="string">" "</span> + tempResult</span><br><span class="line">             </span><br><span class="line">        <span class="comment">##输出    </span></span><br><span class="line">        <span class="keyword">print</span> (tempResult)</span><br><span class="line">        <span class="comment">##清空临时结果</span></span><br><span class="line">        tempResult = <span class="string">""</span></span><br><span class="line"></span><br><span class="line">        </span><br><span class="line">printGoldTa(<span class="string">"E"</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>A--&gt;E:5
+    A
+   ABA
+  ABCBA
+ ABCDCBA
+ABCDEDCBA
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/08/18/PYTHON-NO1/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+
+
+
+  
     <article id="post-金玉良言" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -926,91 +1032,6 @@
 
 
   
-    <article id="post-note3-1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/03/13/note3-1/">日记3-1</a>
-    </h1>
-  
-
-
-
-
-
-        
-        <a href="/2018/03/13/note3-1/" class="archive-article-date">
-  	<time datetime="2018-03-13T07:17:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-13</time>
-</a>
-        
-      </header>
-    
-	
-	    <div class="article-entry" itemprop="articleBody">
-      
-        请输入密码：亲
-        
-          <a class="article-more-a" href="/2018/03/13/note3-1/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">日记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/03/13/note3-1/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -1201,11 +1222,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">STM32</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color2">python</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1218,10 +1243,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">日记</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">python</a>
               </li>
              
               <li class="article-tag-list-item">
