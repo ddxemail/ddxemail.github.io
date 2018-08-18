@@ -187,31 +187,10 @@
 	
 	    <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="python-学习笔记No-1"><a href="#python-学习笔记No-1" class="headerlink" title="python 学习笔记No.1"></a>python 学习笔记No.1</h1><h3 id="python中的运算符优先级"><a href="#python中的运算符优先级" class="headerlink" title=" python中的运算符优先级"></a> python中的运算符优先级</h3><p> 比较运算符低于逻辑运算符</p>
-<p> 逻辑运算符：not 最高 and 次之 or 优先级最低</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">not</span> <span class="number">1</span>+<span class="number">4</span>&gt;<span class="number">3</span> <span class="keyword">or</span> <span class="number">4</span>&gt;<span class="number">3</span> <span class="keyword">and</span> <span class="number">4</span>&gt;<span class="number">3</span></span><br><span class="line">(<span class="keyword">not</span> <span class="number">1</span>+<span class="number">4</span>&gt;<span class="number">3</span>)<span class="keyword">or</span>(<span class="number">4</span>&gt;<span class="number">3</span> <span class="keyword">and</span> <span class="number">4</span>&gt;<span class="number">3</span>)</span><br></pre></td></tr></table></figure>
-<pre><code>True
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">s=<span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span> m <span class="keyword">in</span> range(<span class="number">10</span>):</span><br><span class="line"> s=s+m</span><br><span class="line"></span><br><span class="line"><span class="keyword">print</span> (s)</span><br></pre></td></tr></table></figure>
-<pre><code>45
-</code></pre><h3 id="EXample"><a href="#EXample" class="headerlink" title="EXample"></a>EXample</h3><p>请编写一个程序 要求用户输入一个大写英文字母，程序根据输入字符在字母表里的顺序位置n 输出一个高度为n的金字塔图形。使下一列的中间字母使用户输入的字母例如 用户输入E时，程序将产生如下输出。</p>
-<pre><code>    A
-
-   ABA
-
-  ABCBA
-
- ABCDCBA
-
-ABCDEDCBA
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">printGoldTa</span><span class="params">(input)</span>:</span></span><br><span class="line">    L = [chr(i) <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">65</span>,<span class="number">91</span>)] <span class="comment">##大写字母A--Z </span></span><br><span class="line">    idA = <span class="number">65</span> <span class="comment">#从A开始</span></span><br><span class="line">    idInput = ord(input)</span><br><span class="line">    num =  idInput - idA + <span class="number">1</span> <span class="comment">##A--输入的字符个数</span></span><br><span class="line">    <span class="keyword">print</span> (<span class="string">'A--&gt;'</span> + input + <span class="string">':'</span> + str(num))</span><br><span class="line">    tempResult =<span class="string">""</span></span><br><span class="line">    <span class="keyword">for</span> C <span class="keyword">in</span> range(<span class="number">0</span>,num):</span><br><span class="line">        <span class="comment">##左 [ABCD]</span></span><br><span class="line">        <span class="keyword">for</span> C1 <span class="keyword">in</span> range(<span class="number">0</span>,C):</span><br><span class="line">            tempResult = tempResult + L[C1] </span><br><span class="line">        <span class="comment">## 中 [E]</span></span><br><span class="line">        tempResult = tempResult + L[C] </span><br><span class="line">        <span class="comment">##右 [DCBA]</span></span><br><span class="line">        <span class="keyword">for</span> C2 <span class="keyword">in</span> range(C<span class="number">-1</span>,<span class="number">-1</span>,<span class="number">-1</span>):</span><br><span class="line">            tempResult = tempResult + L[C2]  </span><br><span class="line">        <span class="comment">##每行空格</span></span><br><span class="line">        <span class="keyword">for</span> C3 <span class="keyword">in</span> range(num<span class="number">-1</span>-C): </span><br><span class="line">            tempResult = <span class="string">" "</span> + tempResult</span><br><span class="line">             </span><br><span class="line">        <span class="comment">##输出    </span></span><br><span class="line">        <span class="keyword">print</span> (tempResult)</span><br><span class="line">        <span class="comment">##清空临时结果</span></span><br><span class="line">        tempResult = <span class="string">""</span></span><br><span class="line"></span><br><span class="line">        </span><br><span class="line">printGoldTa(<span class="string">"E"</span>)</span><br></pre></td></tr></table></figure>
-<pre><code>A--&gt;E:5
-    A
-   ABA
-  ABCBA
- ABCDCBA
-ABCDEDCBA
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
+        <p>不整花里胡哨的了，只有音乐和文字的笔记。<br>
+        
+          <a class="article-more-a" href="/2018/08/18/PYTHON-NO1/#more">more >></a>
+        
       
 
       
