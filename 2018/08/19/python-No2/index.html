@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="http://htsing.me">
   <title>python_No2 | Htsing-且随疾风前行，身后亦须留心</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="python学习笔记No.2">
+  <meta name="description" content="循环，递归与函数">
 <meta name="keywords" content="python">
 <meta property="og:type" content="article">
 <meta property="og:title" content="python_No2">
 <meta property="og:url" content="http://htsing.me/2018/08/19/python-No2/index.html">
 <meta property="og:site_name" content="Htsing-且随疾风前行，身后亦须留心">
-<meta property="og:description" content="python学习笔记No.2">
+<meta property="og:description" content="循环，递归与函数">
 <meta property="og:image" content="https://www.zhihu.com/question/24385418">
-<meta property="og:updated_time" content="2018-08-19T06:19:30.515Z">
+<meta property="og:updated_time" content="2018-08-19T06:21:38.864Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="python_No2">
-<meta name="twitter:description" content="python学习笔记No.2">
+<meta name="twitter:description" content="循环，递归与函数">
 <meta name="twitter:image" content="https://www.zhihu.com/question/24385418">
   
     <link rel="alternative" href="/atom.xml" title="Htsing-且随疾风前行，身后亦须留心" type="application/atom+xml">
@@ -193,8 +193,9 @@
     
 	    <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="python学习笔记No-2"><a href="#python学习笔记No-2" class="headerlink" title="python学习笔记No.2"></a>python学习笔记No.2</h1><a id="more"></a>
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=167876&auto=1&height=66"></iframe>
+        <p>循环，递归与函数 </p>
+<a id="more"></a>
+<h1 id="python学习笔记No-2"><a href="#python学习笔记No-2" class="headerlink" title="python学习笔记No.2"></a>python学习笔记No.2</h1><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=167876&auto=1&height=66"></iframe>
 
 <h3 id="递归与斐波那契数列"><a href="#递归与斐波那契数列" class="headerlink" title="递归与斐波那契数列"></a>递归与斐波那契数列</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">power</span><span class="params">(x,n)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> n==<span class="number">0</span>:</span><br><span class="line">         <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">         <span class="keyword">return</span> x*power(x,n<span class="number">-1</span>)</span><br><span class="line">power(<span class="number">2</span>,<span class="number">10</span>)</span><br></pre></td></tr></table></figure>
 <pre><code>1024
