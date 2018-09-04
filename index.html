@@ -162,6 +162,92 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-rename" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/09/04/rename/">文件重命名</a>
+    </h1>
+  
+
+
+
+
+
+        
+        <a href="/2018/09/04/rename/" class="archive-article-date">
+  	<time datetime="2018-09-04T08:14:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-04</time>
+</a>
+        
+      </header>
+    
+	
+	    <div class="article-entry" itemprop="articleBody">
+      
+        <a id="more"></a>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="700" height="86" src="//music.163.com/outchain/player?type=2&id=25714332&auto=1&height=66"></iframe>
+
+<h2 id="文件重命名"><a href="#文件重命名" class="headerlink" title=" 文件重命名"></a><center> 文件重命名</center></h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> xlrd</span><br><span class="line"><span class="keyword">import</span> os </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">path=<span class="string">'C:\\Users\\Htsing\\Desktop\\test1\\'</span></span><br><span class="line">path1=<span class="string">'C:\\Users\\Htsing\\Desktop\\information.xlsx'</span></span><br><span class="line">data = xlrd.open_workbook(path1) <span class="comment"># 打开xls文件</span></span><br><span class="line">table = data.sheets()[<span class="number">0</span>] <span class="comment"># 打开第一张表</span></span><br><span class="line">nrows = table.nrows <span class="comment"># 获取表的行数</span></span><br><span class="line">belong=[table.row_values(i)[<span class="number">0</span>] <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>,nrows)]</span><br><span class="line">name=[table.row_values(i)[<span class="number">1</span>] <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>,nrows)]</span><br><span class="line">number=[table.row_values(i)[<span class="number">2</span>] <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>,nrows)]</span><br><span class="line">gender=[table.row_values(i)[<span class="number">3</span>] <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>,nrows)]</span><br><span class="line">i=<span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> file <span class="keyword">in</span> os.listdir(path):</span><br><span class="line">    <span class="keyword">if</span> os.path.isfile(os.path.join(path,file))==<span class="keyword">True</span>:</span><br><span class="line">        new_name=file.replace(file,<span class="string">"%s.docx"</span>%(belong[i]+<span class="string">' '</span>+name[i]+<span class="string">' '</span>+number[i]))</span><br><span class="line">        <span class="comment">#new_name=file.replace(file,"%s.docx"%i)</span></span><br><span class="line">        os.rename(os.path.join(path,file),os.path.join(path,new_name))</span><br><span class="line">        i+=<span class="number">1</span></span><br></pre></td></tr></table></figure>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/09/04/rename/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+
+
+
+  
     <article id="post-NO1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -933,91 +1019,6 @@
 
 
   
-    <article id="post-《麦田里的守望者》读后感" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/04/30/《麦田里的守望者》读后感/">《麦田里的守望者》读后感</a>
-    </h1>
-  
-
-
-
-
-
-        
-        <a href="/2018/04/30/《麦田里的守望者》读后感/" class="archive-article-date">
-  	<time datetime="2018-04-30T08:22:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-30</time>
-</a>
-        
-      </header>
-    
-	
-	    <div class="article-entry" itemprop="articleBody">
-      
-        <p><img src="http://p3v7kl29h.bkt.clouddn.com/18-4-30/31899190.jpg" alt=""><br>
-        
-          <a class="article-more-a" href="/2018/04/30/《麦田里的守望者》读后感/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">读书笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/04/30/《麦田里的守望者》读后感/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -1212,10 +1213,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">python</a>
               </li>
              
@@ -1224,7 +1221,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">日记</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1233,6 +1230,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">学习</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">日记</a>
               </li>
              
               <li class="article-tag-list-item">
