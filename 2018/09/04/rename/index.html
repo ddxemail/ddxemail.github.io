@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="http://htsing.me">
   <title>文件重命名 | Htsing-且随疾风前行，身后亦须留心</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="文件重命名1234567891011121314151617181920import xlrdimport os path=&apos;C:\\Users\\Htsing\\Desktop\\test1\\&apos;path1=&apos;C:\\Users\\Htsing\\Desktop\\information.xlsx&apos;data = xlrd.open_workbook(path1) # 打开xls文件tab">
+  <meta name="description" content="文件重命名">
 <meta name="keywords" content="python">
 <meta property="og:type" content="article">
 <meta property="og:title" content="文件重命名">
 <meta property="og:url" content="http://htsing.me/2018/09/04/rename/index.html">
 <meta property="og:site_name" content="Htsing-且随疾风前行，身后亦须留心">
-<meta property="og:description" content="文件重命名1234567891011121314151617181920import xlrdimport os path=&apos;C:\\Users\\Htsing\\Desktop\\test1\\&apos;path1=&apos;C:\\Users\\Htsing\\Desktop\\information.xlsx&apos;data = xlrd.open_workbook(path1) # 打开xls文件tab">
-<meta property="og:updated_time" content="2018-09-04T08:23:44.241Z">
+<meta property="og:description" content="文件重命名">
+<meta property="og:updated_time" content="2018-09-04T10:28:11.921Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="文件重命名">
-<meta name="twitter:description" content="文件重命名1234567891011121314151617181920import xlrdimport os path=&apos;C:\\Users\\Htsing\\Desktop\\test1\\&apos;path1=&apos;C:\\Users\\Htsing\\Desktop\\information.xlsx&apos;data = xlrd.open_workbook(path1) # 打开xls文件tab">
+<meta name="twitter:description" content="文件重命名">
   
     <link rel="alternative" href="/atom.xml" title="Htsing-且随疾风前行，身后亦须留心" type="application/atom+xml">
   
@@ -191,7 +191,7 @@
     
 	    <div class="article-entry" itemprop="articleBody">
       
-        <a id="more"></a>
+        <p>文件重命名<br><a id="more"></a></p>
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="700" height="86" src="//music.163.com/outchain/player?type=2&id=25714332&auto=1&height=66"></iframe>
 
 <h2 id="文件重命名"><a href="#文件重命名" class="headerlink" title=" 文件重命名"></a><center> 文件重命名</center></h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> xlrd</span><br><span class="line"><span class="keyword">import</span> os </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">path=<span class="string">'C:\\Users\\Htsing\\Desktop\\test1\\'</span></span><br><span class="line">path1=<span class="string">'C:\\Users\\Htsing\\Desktop\\information.xlsx'</span></span><br><span class="line">data = xlrd.open_workbook(path1) <span class="comment"># 打开xls文件</span></span><br><span class="line">table = data.sheets()[<span class="number">0</span>] <span class="comment"># 打开第一张表</span></span><br><span class="line">nrows = table.nrows <span class="comment"># 获取表的行数</span></span><br><span class="line">belong=[table.row_values(i)[<span class="number">0</span>] <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>,nrows)]</span><br><span class="line">name=[table.row_values(i)[<span class="number">1</span>] <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>,nrows)]</span><br><span class="line">number=[table.row_values(i)[<span class="number">2</span>] <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>,nrows)]</span><br><span class="line">gender=[table.row_values(i)[<span class="number">3</span>] <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>,nrows)]</span><br><span class="line">i=<span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> file <span class="keyword">in</span> os.listdir(path):</span><br><span class="line">    <span class="keyword">if</span> os.path.isfile(os.path.join(path,file))==<span class="keyword">True</span>:</span><br><span class="line">        new_name=file.replace(file,<span class="string">"%s.docx"</span>%(belong[i]+<span class="string">' '</span>+name[i]+<span class="string">' '</span>+number[i]))</span><br><span class="line">        <span class="comment">#new_name=file.replace(file,"%s.docx"%i)</span></span><br><span class="line">        os.rename(os.path.join(path,file),os.path.join(path,new_name))</span><br><span class="line">        i+=<span class="number">1</span></span><br></pre></td></tr></table></figure>
